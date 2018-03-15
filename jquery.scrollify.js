@@ -93,7 +93,7 @@ if touchScroll is false - update index
       afterRender:function() {}
     };
   function getportHeight() {
-    return ($window.height() + settings.offset);
+    return (window.innerHeight + settings.offset);
   }
   function animateScroll(index,instant,callbacks,toTop) {
     if(currentIndex===index) {
@@ -661,7 +661,7 @@ if touchScroll is false - update index
             } else {
               names[i] = "#";
               if(i===$(selector).length-1 && i>1) {
-                heights[i] = heights[i-1] + (parseInt($($(selector)[i-1]).outerHeight()) - parseInt($(window).height())) + parseInt($this.outerHeight());
+                heights[i] = heights[i-1] + (parseInt($($(selector)[i-1]).outerHeight()) - parseInt(window.innerHeight)) + parseInt($this.outerHeight());
               }
             }
           }
